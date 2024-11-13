@@ -1,0 +1,167 @@
+//variables
+$primary-color: #4797ed;
+$primary-hover-color: #0056b3;
+$secondary-color: #28a745;
+$secondary-hover-color: #218838;
+$third-color: #c37ef5 ;
+$third-hover-color: #5b0788;
+$background-color: wheat;
+$container-bg-color: #ffffff;
+$text-color: #333;
+$subtext-color: #666; 
+
+//styling 
+body{
+    overflow: hidden;
+    background-color: $background-color;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: $text-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+
+}
+
+header{
+    width: 100%;
+    background-color: $container-bg-color;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    padding: 20px 0;
+
+    h1{
+        margin: 0;
+        font-size: 2.5rem;
+        color: $text-color;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+}
+
+
+.container {
+    background-color: $container-bg-color;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin: 40px auto;
+
+   
+    max-height: 2000vh; 
+    height: auto;
+    overflow-y: auto;
+
+    h1{
+        font-size: 2.5rem;
+        color: $text-color;
+        margin-bottom: 1.5rem;
+    }
+
+    p{
+        font-size: 18px;
+        color: $subtext-color;
+        margin-bottom: 20px;
+    }
+
+    .input-field{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #333;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        box-sizing: border-box;
+
+        &:focus{
+            border-color: $primary-color;
+            outline: none;
+        }
+    }
+
+    .btn{
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        
+
+        &.btn-st{
+            background-color: $third-color;
+            color: #ffffff;
+        }
+
+        &.btn-login{
+            background-color: $primary-color;
+            color: #fff;
+
+            &:hover{
+                background-color: $primary-hover-color;
+            }
+        }
+
+        &.btn-register{
+            background-color: $secondary-color;
+            color: #fff;
+
+            &:hover{
+                background-color: $secondary-hover-color;
+            }
+        }
+    }
+}
+
+.container .btn-secondary {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px; 
+    z-index: 10; 
+}
+
+.container_name {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    background-color: #dd4d0a;  
+
+    .btn-logout {
+        position: absolute;
+        top: 10px;
+        right: 10px; 
+        border: none;
+        background-color: #ff4d0a;  
+        color: #fff;
+        padding: 10px 10px; 
+        text-decoration: none; 
+        border-radius: 5px;
+        
+        &:hover {
+            padding-left: 15px;  
+            background-color: #e03e00; 
+        }
+    }
+
+   
+    h1 {
+        position: absolute;
+        top: 10px;
+        left: 10px; 
+        margin: 0;
+        font-size: 30px;  
+    }
+}
+

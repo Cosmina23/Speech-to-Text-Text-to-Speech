@@ -1,0 +1,5 @@
+In POWERSHELL : 
+create virtual environment   :   python -m venv venv_flask 
+start virtual environment    :   .\venv\bin\Activate.ps1 
+install Flask                :    pip3 install Flask Flask_SQLAlchemy
+get all the requirments      :    pip freeze > requirments.txt 

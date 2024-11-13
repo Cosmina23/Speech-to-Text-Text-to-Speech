@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+    <h1>Speech to Text</h1>
+    <form action="{{ url_for('speech_to_text') }}" method="POST">
+        <button type="button" onclick="startSpeechToText()" class="btn btn-primary">Start Speech Recognition</button>
+        <input type="text" id="recognizedText" name="text" placeholder="Your recognized text will appear here" required />
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+    {% if recognized_text %}
+        <h3>Text Recunoscut:</h3>
+        <p>{{ recognized_text }}</p>
+    {% endif %}
+    <a href="{{ url_for('dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+</div>
+
+<script>
+    function startSpeechToText() {
+        const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.lang = 'en';  
+        recognition.start();
+
+        recognition.onresult = function(event) {
+            const transcript = event.results[0][0].transcript;
+            document.getElementById('recognizedText').value = transcript; 
+        }
+
+        recognition.onerror = function(event) {
+            console.error("Speech recognition error: ", event.error);
+        }
+    }
+</script>
+{% endblock %}

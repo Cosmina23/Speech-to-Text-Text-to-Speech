@@ -1,0 +1,133 @@
+body {
+  overflow: hidden;
+  background-color: wheat;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto;
+  max-height: 2000vh;
+  height: auto;
+  overflow-y: auto;
+}
+.container h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+.container p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+.container .input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+}
+.container .input-field:focus {
+  border-color: #4797ed;
+  outline: none;
+}
+.container .btn {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.container .btn.btn-st {
+  background-color: #c37ef5;
+  color: #ffffff;
+}
+.container .btn.btn-login {
+  background-color: #4797ed;
+  color: #fff;
+}
+.container .btn.btn-login:hover {
+  background-color: #0056b3;
+}
+.container .btn.btn-register {
+  background-color: #28a745;
+  color: #fff;
+}
+.container .btn.btn-register:hover {
+  background-color: #218838;
+}
+
+.container .btn-secondary {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.container_name {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #dd4d0a;
+}
+.container_name .btn-logout {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background-color: #ff4d0a;
+  color: #fff;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.container_name .btn-logout:hover {
+  padding-left: 15px;
+  background-color: #e03e00;
+}
+.container_name h1 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  font-size: 30px;
+}/*# sourceMappingURL=style.css.map */

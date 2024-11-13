@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container">
+    <h1>Text to Speech</h1>
+    <form action="/text_to_speech" method="POST">
+        <input type="text" name="text" class="form-control" placeholder="Enter text here" required>
+        <button type="submit" class="btn btn-primary">Convert to Speech</button>
+    </form>
+
+    {% if audio_files %}
+    <h3>Your generated speeches:</h3>
+    {% for audio_file in audio_files %}
+        <div style="margin-bottom: 10px;">
+            <audio controls>
+                <source src="{{ url_for('static', filename='audio/' + audio_file.split('/')[-1]) }}" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    {% endfor %}
+    {% endif %}
+    
+    <a href="{{ url_for('dashboard') }}" class="btn-secondary">Back to Dashboard</a>
+</div>
+
+{% endblock %}

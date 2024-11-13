@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container_name">
+    <h1>{{ username }}</h1>
+    <a href="{{url_for('logout')}}" class="btn-logout">Logout</a>
+</div>
+<div class="container">
+    <p>Choose an option</p>
+    <a href="{{ url_for('text_to_speech_page') }}" class="btn">Text to Speech</a>
+    <a href="{{url_for('speech_to_text_page')}}" class="btn">Speech to text</a>
+    
+</div>
+
+{% endblock %}
